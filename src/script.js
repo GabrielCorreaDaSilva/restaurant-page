@@ -1,5 +1,5 @@
 import "./styles.css";
-import { loadHomePage } from "./initial";
+import { pagesController } from "./pages";
 // alert("Working JS")
 
-loadHomePage();
+pagesController();
