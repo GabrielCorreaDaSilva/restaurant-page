@@ -1,4 +1,3 @@
-import menu from "./menu-data";
 import { loadMenuPage } from "./menu";
 import { loadHomePage } from "./home";
 
@@ -19,7 +18,7 @@ export function pagesController() {
                 break;
             case "Menu":
                 content.textContent = "";
-                loadMenuPage(menu, content);
+                loadMenuPage(content);
                 break;
         }
     }

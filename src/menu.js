@@ -1,3 +1,5 @@
+import menu from "./menu-data";
+
 function createMenuItem(item) {
     const card = document.createElement("div");
     card.classList.add("card");
@@ -12,25 +14,35 @@ function createMenuItem(item) {
 
     const price = document.createElement("p");
     price.classList.add("price");
-    price.textContent = "$" + item.price;
+    price.textContent = "Price: " + "$" + item.price;
 
     card.append(name, description, price);
     return card;
 }
 
-function createMenu(menu, content) {
-    const title = document.createElement("h1");
-    title.classList.add("title","menu-title");
-    title.textContent = "Menu";
-    content.append(title);
-    
-    menu.forEach(item => content.append(createMenuItem(item)));
+function createMenu(content) {
+    const menuDiv = document.createElement("div");
+    menuDiv.classList.add("menu-wrapper");
+
+    menu.forEach(section => {
+        const menuSection = document.createElement("div");
+        menuSection.classList.add("section");
+        const title = document.createElement("h2");
+        title.classList.add("title", "section-name");
+        title.textContent = section.name;
+        menuSection.append(title);
+        section.items.forEach(item => menuSection.append(createMenuItem(item)));
+        const sectionDivider = document.createElement("hr");
+        menuDiv.append(sectionDivider, menuSection);
+    });
+
+    content.append(menuDiv);
 }
 
-export function loadMenuPage(menu, content) {
+export function loadMenuPage(content) {
     const title = document.createElement("h1");
-    title.classList.add("title");
+    title.classList.add("title", "menu-title");
+    title.textContent = "Menu";
     content.append(title);
-
-    createMenu(menu, content);
+    createMenu(content);
 }

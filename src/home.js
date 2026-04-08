@@ -1,7 +1,8 @@
 const firstSection = (() => {
     const section = document.createElement("section");
+    section.classList.add("card");
 
-    const title = document.createElement("h1");
+    const title = document.createElement("h2");
     title.classList.add("title");
     title.textContent = "Restaurant";
 
@@ -20,6 +21,7 @@ const firstSection = (() => {
 
 const secondSection = (() => {
     const section = document.createElement("section");
+    section.classList.add("card");
 
     const title = document.createElement("h2");
     title.classList.add("title");
@@ -40,6 +42,7 @@ const secondSection = (() => {
 
 const thirdSection = (() => {
     const section = document.createElement("section");
+    section.classList.add("card");
 
     const title = document.createElement("h2");
     title.classList.add("title");
