@@ -1,5 +1,4 @@
-import "./styles.css";
-import { pagesController } from "./pages";
-// alert("Working JS")
+import "./styles/styles.css";
+import { pagesController } from "./pages/pages";
 
 pagesController();

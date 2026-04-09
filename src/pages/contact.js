@@ -1,3 +1,5 @@
+import "../styles/contactpage.css";
+
 import contactData from "./contact-data";
 
 function createContactItem(item) {
@@ -29,11 +31,10 @@ function createContactList() {
     contacts.classList.add("contact-wrapper");
 
     const title = document.createElement("h1");
-    title.classList.add("title");
+    title.classList.add("title", "page-title");
     title.textContent = "Contact Us";
 
     const division = document.createElement("hr");
-
 
     contactData.forEach(item => contacts.append(createContactItem(item)));
 

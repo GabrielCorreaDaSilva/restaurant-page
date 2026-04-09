@@ -1,0 +1,59 @@
+.menu-wrapper {
+    width: 100%;
+}
+
+.menu-wrapper .card {
+    width: 90%;
+    padding: 20px;
+    margin: 20px;
+}
+
+.menu-page h1.title {
+    width: 12rem;
+    padding: 20px;
+    place-self: center;
+}
+
+.menu-wrapper .section-name {
+    width: 30rem;
+    margin: 0 auto;
+    align-self: center;
+    display: flex;
+    gap: 16px;
+    place-content: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+
+.section-name hr {
+    border: 2px solid var(--text-color);
+    width: 15%;
+    flex: 1;
+    margin: 0;
+}
+
+.section-name hr:first-child {
+    margin-left: 10%;
+}
+
+.section-name hr:last-child {
+    margin-right: 10%;
+}
+
+.section {
+    display: grid;
+    grid-template-rows: 80px 200px 200px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card .title {
+    padding: 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    place-content: center;
+}

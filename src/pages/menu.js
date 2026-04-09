@@ -1,4 +1,5 @@
 import menu from "./menu-data";
+import "../styles/menupage.css";
 
 function createMenuItem(item) {
     const card = document.createElement("div");

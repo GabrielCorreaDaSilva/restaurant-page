@@ -1,12 +1,14 @@
+import "../styles/homepage.css";
+
 const createSitation = () => {
     const section = document.createElement("section");
     section.classList.add("card");
 
     const article = document.createElement("article");
     article.textContent = `
-        The best restaurant ever! Meats? they got it! Vegan... they still got! They even got pasta it's just amazing! 
-        I'm not sure i want to even leave this place. 
-        I'm pretty sure some of the staff are cartoon characters but i don't even care the food is that good!
+        The best restaurant ever! Meats? They got it! Vegan... they still got! They even got pasta it's just amazing! 
+        I'm not sure I want to even leave this place. 
+        I'm pretty sure some of the staff are cartoon characters, but I don't even care the food is that good!
     `;
     const autor = document.createElement("h3");
     autor.textContent = "Bob";

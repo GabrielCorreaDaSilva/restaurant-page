@@ -1,0 +1,38 @@
+/*homepage*/
+
+.homepage {
+    place-items: center;
+}
+
+.homepage .page-title {
+    width: 25rem;
+}
+
+.homepage .card {
+    padding: 22px;
+    margin: 24px 0;
+    width: 32rem;
+    background-color: white;
+    border: 2px solid var(--primary-color);
+}
+
+article {
+    width: 60ch;
+    margin: 0 auto;
+    word-spacing: 4px;
+}
+
+.homepage .autor {
+    text-align: start;
+    padding-top: 12px;
+    padding-left: 30px;
+}
+
+.title,
+p {
+    text-align: center;
+}
+
+.title {
+    padding: 12px;
+}

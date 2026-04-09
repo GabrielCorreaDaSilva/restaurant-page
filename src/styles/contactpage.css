@@ -1,0 +1,30 @@
+/*Contact*/
+
+.contact-page {
+    place-items: center;
+}
+
+.contact-page .card {
+    padding: 22px;
+    margin: 24px 0;
+    width: 28rem;
+    background-color: white;
+    border: 2px solid var(--primary-color);
+}
+
+.contact-page .page-title {
+    width: 20rem;
+}
+
+.contact-wrapper .card p,
+.contact-wrapper .card .title {
+    text-align: start;
+}
+
+.contact-wrapper .card p {
+    padding-left: 30px;
+}
+
+.contact-wrapper .card .title {
+    padding-left: 12px;
+}
