@@ -1,5 +1,6 @@
 import { loadMenuPage } from "./menu";
 import { loadHomePage } from "./home";
+import { loadContactPage } from "./contact";
 
 export function pagesController() {
     const content = document.querySelector("#content");
@@ -22,15 +23,20 @@ export function pagesController() {
         switch (activePagebtn.textContent) {
             case "Home":
                 content.textContent = "";
-                loadHomePage();
+                loadHomePage(content);
                 break;
             case "Menu":
                 content.textContent = "";
                 loadMenuPage(content);
                 break;
+            case "Contact":
+                content.textContent = "";
+                loadContactPage(content);
+                break;
+
         }
     }
 
     nav.addEventListener("click", handlePages);
-    loadHomePage();
+    loadHomePage(content);
 }

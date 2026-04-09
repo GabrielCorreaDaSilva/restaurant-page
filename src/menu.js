@@ -27,10 +27,21 @@ function createMenu(content) {
     menu.forEach(section => {
         const menuSection = document.createElement("div");
         menuSection.classList.add("section");
+
+        const titleWrapper = document.createElement("div");
+
+        const hr1 = document.createElement("hr");
         const title = document.createElement("h2");
-        title.classList.add("title", "section-name");
+        const hr2 = document.createElement("hr");
+
+        title.classList.add("title");
+        titleWrapper.classList.add("section-name");
+        titleWrapper.append(hr1, title, hr2);
+
         title.textContent = section.name;
-        menuSection.append(title);
+
+        menuSection.append(titleWrapper);
+
         section.items.forEach(item => menuSection.append(createMenuItem(item)));
         const sectionDivider = document.createElement("hr");
         menuDiv.append(sectionDivider, menuSection);

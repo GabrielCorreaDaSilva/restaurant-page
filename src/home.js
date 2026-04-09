@@ -1,4 +1,4 @@
-const firstSection = (() => {
+const firstSection = () => {
     const section = document.createElement("section");
     section.classList.add("card");
 
@@ -17,9 +17,9 @@ const firstSection = (() => {
     section.append(article);
 
     return section;
-})();
+};
 
-const secondSection = (() => {
+const secondSection = () => {
     const section = document.createElement("section");
     section.classList.add("card");
 
@@ -38,9 +38,9 @@ const secondSection = (() => {
     section.append(weekends);
 
     return section;
-})();
+};
 
-const thirdSection = (() => {
+const thirdSection = () => {
     const section = document.createElement("section");
     section.classList.add("card");
 
@@ -55,13 +55,9 @@ const thirdSection = (() => {
     section.append(address);
 
     return section;
-})();
+};
 
-export function loadHomePage() {
-    const content = document.querySelector("#content");
-
-    content.append(firstSection);
-    content.append(secondSection);
-    content.append(thirdSection);
+export function loadHomePage(content) {
+    content.append(firstSection(), secondSection(), thirdSection());
 }
 
