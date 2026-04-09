@@ -20,7 +20,7 @@ function createMenuItem(item) {
     return card;
 }
 
-function createMenu(content) {
+function createMenu() {
     const menuDiv = document.createElement("div");
     menuDiv.classList.add("menu-wrapper");
 
@@ -47,13 +47,18 @@ function createMenu(content) {
         menuDiv.append(sectionDivider, menuSection);
     });
 
-    content.append(menuDiv);
+    return menuDiv;
 }
 
 export function loadMenuPage(content) {
+    const menuPage = document.createElement("div");
+    menuPage.classList.add("menu-page");
+
     const title = document.createElement("h1");
-    title.classList.add("title", "menu-title");
+    title.classList.add("title", "page-title");
     title.textContent = "Menu";
-    content.append(title);
-    createMenu(content);
+
+    menuPage.append(title, createMenu());
+    content.append(menuPage);
+
 }

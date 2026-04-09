@@ -42,5 +42,9 @@ function createContactList() {
 
 export function loadContactPage(content) {
     const { title, division, contacts } = createContactList();
-    content.append(title, division, contacts);
+    const contactPage = document.createElement("div");
+    contactPage.classList.add("contact-page");
+
+    contactPage.append(title, division, contacts);
+    content.append(contactPage);
 }

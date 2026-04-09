@@ -1,25 +1,24 @@
-const firstSection = () => {
+const createSitation = () => {
     const section = document.createElement("section");
     section.classList.add("card");
 
-    const title = document.createElement("h2");
-    title.classList.add("title");
-    title.textContent = "Restaurant";
-
     const article = document.createElement("article");
     article.textContent = `
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laudantium libero provident dignissimos
-        laborum inventore natus vitae facilis incidunt nam. Veniam, impedit? Delectus ratione voluptatibus
-        tempora quam est, neque rem!
+        The best restaurant ever! Meats? they got it! Vegan... they still got! They even got pasta it's just amazing! 
+        I'm not sure i want to even leave this place. 
+        I'm pretty sure some of the staff are cartoon characters but i don't even care the food is that good!
     `;
+    const autor = document.createElement("h3");
+    autor.textContent = "Bob";
+    autor.classList.add("autor");
 
-    section.append(title);
     section.append(article);
+    section.append(autor);
 
     return section;
 };
 
-const secondSection = () => {
+const createOpeningHours = () => {
     const section = document.createElement("section");
     section.classList.add("card");
 
@@ -40,7 +39,7 @@ const secondSection = () => {
     return section;
 };
 
-const thirdSection = () => {
+const createLocation = () => {
     const section = document.createElement("section");
     section.classList.add("card");
 
@@ -58,6 +57,14 @@ const thirdSection = () => {
 };
 
 export function loadHomePage(content) {
-    content.append(firstSection(), secondSection(), thirdSection());
+    const title = document.createElement("h1");
+    title.classList.add("title", "page-title");
+    title.textContent = "All-in-One Restaurant";
+
+    const homePage = document.createElement("div");
+    homePage.classList.add("homepage");
+
+    homePage.append(title, createSitation(), createOpeningHours(), createLocation());
+    content.append(homePage);
 }
 
