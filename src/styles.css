@@ -8,12 +8,13 @@
     --white-beige: rgb(243, 243, 243);
     --primary-color: #dca486;
     --secondary-color: #faf1ec;
+    --ternary-color: #ffddcb;
     --text-color: #6b4f3f;
 }
 
 html,
 body {
-    background-color: #ffddcb;
+    background-color: var(--ternary-color);
     color: white;
     height: 100%;
     display: flex;
@@ -57,10 +58,17 @@ button {
     font-size: 1.1rem;
 }
 
+button.current {
+    background-color: #6b4f3f;
+    pointer-events: none;
+    border-color: #6b4f3f;
+}
+
 button:hover {
     background-color: white;
     color: black;
 }
+
 
 .title,
 p {
